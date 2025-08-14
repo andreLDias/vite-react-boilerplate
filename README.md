@@ -1,8 +1,8 @@
 # React + TypeScript + Vite
 
-This boilerplate was created using `pnpm create vite`
-It contains basic configuration to start new projects faster
-I strongly recommend `pnmp`
+This boilerplate was created using `pnpm create vite`<br>
+It contains basic configuration to start new projects faster<br>
+I strongly recommend `pnmp`<br>
 
 ## Boilerplate content
 - Vite + ReactJs (typescript)
