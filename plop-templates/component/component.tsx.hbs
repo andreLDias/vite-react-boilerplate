@@ -1,0 +1,16 @@
+import type React from 'react'
+
+type {{name}}Props = {
+  children?: React.ReactNode
+  className?: string
+}
+
+const {{name}}: React.FC<{{name}}Props> = ({ children, className = '' }) => {
+  return (
+    <div className={`{{kebabCase name}} ${className}`}>
+      {children}
+    </div>
+  )
+}
+
+export default {{name}}
