@@ -1,80 +1,72 @@
-# Testes com Vitest
+![Tests](https://github.com/andreLDias/vite-react-boilerplate/workflows/Tests/badge.svg)
 
-Este projeto usa [Vitest](https://vitest.dev/) para testes unitários e de integração.
+# Testing with vitest
 
-## Scripts disponíveis
+This boilerplate uses [Vitest](https://vitest.dev/).
 
-- `pnpm test` - Executa os testes em modo watch
-- `pnpm test:run` - Executa os testes uma vez
-- `pnpm test:ui` - Abre a interface gráfica do Vitest
-- `pnpm test:coverage` - Executa os testes com relatório de cobertura
+## Available scripts
 
-## Estrutura dos testes
+- `pnpm test` - Run tests on watch mode
+- `pnpm test:run` - Run tests once
+- `pnpm test:ui` - Open vitest graphic interface
+- `pnpm test:coverage` - Run tests with coverage reports
 
-- `src/test/setup.ts` - Configuração global dos testes
-- `src/test/vitest.d.ts` - Tipos TypeScript para o Vitest
-- `*.test.tsx` - Arquivos de teste para componentes React
-- `*.test.ts` - Arquivos de teste para utilitários
+## Tests structure
 
-## Exemplo de teste
+- `src/test/setup.ts` - Global test setup
+- `src/test/vitest.d.ts` - TypeScript types for Vitest
+- `*.test.tsx` - Test files for React components
+- `*.test.ts` - Test files for utilities
+
+## Example
 
 ```tsx
-import { describe, it, expect } from "vitest";
-import { render, screen } from "@testing-library/react";
-import MyComponent from "./MyComponent";
+import { render, screen } from "@testing-library/react"
+import MyComponent from "./MyComponent"
 
 describe("MyComponent", () => {
   it("renders correctly", () => {
-    render(<MyComponent />);
-    expect(screen.getByText("Hello")).toBeInTheDocument();
-  });
-});
+    render(<MyComponent />)
+    expect(screen.getByText("Hello")).toBeInTheDocument()
+  })
+})
 ```
 
-## Configuração
+## Configuration
 
-O Vitest está configurado em `vitest.config.ts` com:
+Vitest is configured in `vitest.config.ts` with:
 
-- Suporte a React
-- Ambiente jsdom para DOM
-- CSS habilitado
-- Arquivo de setup global
+- React support
+- jsdom environment for DOM
+- CSS enabled
+- Global setup file
 
-## CI/CD com GitHub Actions
+## CI/CD with GitHub Actions
+...
 
-### Workflow de Testes
+### Tests workflow
 
-O projeto inclui um workflow automático que executa:
+The project includes an automated workflow that performs:
 
-- **Triggers**: Push e Pull Requests para `main` e `develop`
-- **Node.js**: Versões 18.x e 20.x (matriz de testes)
-- **Etapas**:
-  1. Setup do ambiente
-  2. Cache de dependências
-  3. Instalação com pnpm
-  4. Linting com Biome
-  5. Execução dos testes
-  6. Relatório de cobertura
-  7. Upload para Codecov
+- **Triggers**: Push and Pull Requests to `main` and `develop`
+- **Node.js**: Versions 18.x and 20.x (test matrix)
+- **Steps**:
+  1. Environment setup
+  2. Dependency cache
+  3. Installation with pnpm
+  4. Linting with Biome
+  5. Test execution
+  6. Coverage report
 
-### Workflow de Deploy
 
-Após os testes passarem na branch `main`:
-
-- Build automático do projeto
-- Deploy para GitHub Pages
-- Publicação da pasta `dist`
-
-### Arquivos de Workflow
+### Workflow files
 
 - `.github/workflows/test.yml` - Pipeline de testes
-- `.github/workflows/deploy.yml` - Pipeline de deploy
 
-### Badges (opcional)
+### Badges (optional)
 
-Adicione estes badges ao seu README:
+Add this badge to your README:
 
 ```markdown
-![Testes](https://github.com/seu-usuario/seu-repo/workflows/Testes/badge.svg)
-![Deploy](https://github.com/seu-usuario/seu-repo/workflows/Deploy/badge.svg)
+![Tests](https://github.com/your-user/your-repo/workflows/Tests/badge.svg)
 ```

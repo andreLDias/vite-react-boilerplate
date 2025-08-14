@@ -1,3 +1,5 @@
+![Tests](https://github.com/andreLDias/vite-react-boilerplate/workflows/Tests/badge.svg)
+
 # React + TypeScript + Vite
 
 This boilerplate was created using `pnpm create vite`<br>
