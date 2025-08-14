@@ -1,0 +1,10 @@
+import { render, screen } from '@testing-library/react'
+import {{name}}Page from './{{name}}'
+
+describe('{{name}}Page', () => {
+  it('should render correctly', () => {
+    render(<{{name}}Page />)
+
+    expect(screen.getByText('{{name}} Page')).toBeInTheDocument()
+  })
+})

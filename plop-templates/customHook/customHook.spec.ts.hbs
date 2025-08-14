@@ -1,0 +1,11 @@
+import { renderHook } from '@testing-library/react'
+import { use{{name}} } from './{{name}}'
+
+describe('use{{name}}', () => {
+  it('should return expected values', () => {
+    const { result } = renderHook(() => use{{name}}())
+
+    // Add your test assertions here
+    expect(result.current).toBeDefined()
+  })
+})
