@@ -1,15 +1,18 @@
 import type React from 'react'
+import * as S from './{{name}}.style'
 
-interface {{name}}PageProps {
+type {{name}}PageProps = {
   // Add your page props here
 }
 
 const {{name}}Page: React.FC<{{name}}PageProps> = () => {
   return (
-    <div>
-      <h1>{{name}} Page</h1>
-      {/* Add your page content here */}
-    </div>
+    <S.PageContainer>
+      <S.PageTitle>{{name}} Page</S.PageTitle>
+      <S.PageContent>
+        {/* Add your page content here */}
+      </S.PageContent>
+    </S.PageContainer>
   )
 }
 

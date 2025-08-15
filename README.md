@@ -11,6 +11,7 @@ I strongly recommend `pnmp`<br>
 - [BiomeJs](https://biomejs.dev/)
 - [PlopJs](https://plopjs.com/)
 - [Vitest](https://vitest.dev/)
+- [Styled Components](https://styled-components.com/)
 
 ## Useful commands
 - `pnpm test` - run unit tests with vitest
