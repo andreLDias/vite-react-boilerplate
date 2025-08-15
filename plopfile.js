@@ -35,6 +35,11 @@ export default function (plop) {
       },
       {
         type: 'add',
+        path: 'src/components/{{name}}/{{name}}.style.ts',
+        templateFile: 'plop-templates/component/component.style.ts.hbs',
+      },
+      {
+        type: 'add',
         path: 'src/components/{{name}}/index.ts',
         templateFile: 'plop-templates/component/index.ts.hbs',
       },
@@ -191,6 +196,11 @@ export default function (plop) {
         type: 'add',
         path: 'src/pages/{{name}}/{{name}}.tsx',
         templateFile: 'plop-templates/page/page.tsx.hbs',
+      },
+      {
+        type: 'add',
+        path: 'src/pages/{{name}}/{{name}}.style.ts',
+        templateFile: 'plop-templates/page/page.style.ts.hbs',
       },
       {
         type: 'add',
